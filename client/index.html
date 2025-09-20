@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App and Starpi</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Story+Script&display=swap"
+    rel="stylesheet">
+  <script defer type="module" src="../client/src/filter.js"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <header class="border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-3 items-center h-25">
+
+        <div class="flex items-center">
+          <a href="#">
+            <img
+              src="https://wpbingo-adena.myshopify.com/cdn/shop/files/logo.png?crop=center&height=129&v=1729503852&width=399"
+              alt="Logo" class="h-7 w-auto">
+          </a>
+        </div>
+
+        <nav class="hidden lg:flex justify-center">
+          <ul class="flex items-center space-x-8 text-sm">
+            <li class="relative group">
+              <button class="flex items-center gap-1 py-2 ">
+                <span class="text-black text-[14px] font-[Roboto] hover:text-[#4B372A]">Home</span>
+                <i class="ri-arrow-down-s-line text-black text-lg cursor-pointer hover:text-[#4B372A]"></i>
+              </button>
+            </li>
+
+            <li class="relative group">
+              <button class="flex items-center gap-1 py-2 hover:opacity-90">
+                <span class="text-black text-[14px] font-[Roboto] cursor-pointer hover:text-[#4B372A]">Shop</span>
+                <i class="ri-arrow-down-s-line text-black text-lg cursor-pointer hover:text-[#4B372A]"></i>
+              </button>
+            </li>
+
+            <li class="relative group">
+              <button class="flex items-center gap-1 py-2 hover:opacity-90">
+                <span class="text-black text-[14px] font-[Roboto] cursor-pointer hover:text-[#4B372A]">Product</span>
+                <i class="ri-arrow-down-s-line text-black text-lg cursor-pointer hover:text-[#4B372A]"></i>
+              </button>
+            </li>
+
+            <li class="relative group">
+              <button class="flex items-center gap-1 py-2 hover:opacity-90">
+                <span class="text-black text-[14px] font-[Roboto] cursor-pointer hover:text-[#4B372A]">Blog</span>
+                <i class="ri-arrow-down-s-line text-black text-lg cursor-pointer hover:text-[#4B372A]"></i>
+              </button>
+            </li>
+            <li class="relative group">
+              <button class="flex items-center gap-1 py-2 hover:opacity-90">
+                <span class="text-black text-[14px] font-[Roboto] cursor-pointer hover:text-[#4B372A]">Featured</span>
+                <i class="ri-arrow-down-s-line text-black text-lg cursor-pointer hover:text-[#4B372A]"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center justify-end gap-4">
+          <button aria-label="Axtar" class="p-2">
+            <i class="ri-search-line text-black text-[22px] cursor-pointer hover:text-[#4B372A]"></i>
+          </button>
+          <button aria-label="Hesab" class="p-2">
+            <i class="ri-user-line text-black text-[22px] cursor-pointer hover:text-[#4B372A]"></i>
+          </button>
+
+          <div class="relative">
+            <button aria-label="Saved" class="p-2">
+              <i class="ri-heart-line text-black text-[22px] cursor-pointer hover:text-[#4B372A]"></i>
+            </button>
+            <span
+              class="header-heart-count absolute top-1 -right-1 text-xs bg-[#4B372A] text-white rounded-full px-1.5">0</span>
+          </div>
+
+          <div class="relative">
+            <button aria-label="Səbət" class="p-2">
+              <i class="ri-shopping-cart-line text-black text-[22px] cursor-pointer hover:text-[#4B372A]"></i>
+            </button>
+            <span
+              class="header-cart-count absolute top-1 -right-1 text-xs bg-[#4B372A] text-white rounded-full px-1.5">0</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto py-16">
+
+    <div class="flex justify-center">
+      <img
+        src="https://i.ytimg.com/vi/bdH8wwnJ0n0/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLBiHcDxhRJaneDirEvTL3VIy7Bm0g"
+        alt="Necklace" class="h-26 object-contain mt-[-36px]" />
+    </div>
+
+    <p class="text-center text-[14px] cursor-pointer font-[Roboto] text-black mt-[-20px]">
+      Home / Products / Necklace
+    </p>
+
+    <div class="max-w-md mx-auto transform translate-y-[100px] -translate-x-[100px]">
+  <label for="search" class="sr-only">Search</label>
+  <div class="relative">
+    <input type="text" id="search" placeholder="Search products..."
+      class="w-[600px] rounded-lg border border-gray-300 px-4 py-2 pl-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brown-500" />
+
+    <i class="ri-search-line absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+  </div>
+</div>
+      
+    </div>
+    <aside id="sidebar" class="space-y-6 text-sm text-gray-700 max-w-[260px] mt-[60px]">
+      <details open class="border-b border-gray-200 pb-3">
+        <summary class="flex items-center justify-between cursor-pointer text-[24px] font-[Satisfy]">
+          Collection
+          <i class="ri-arrow-down-s-line text-gray-500"></i>
+        </summary>
+        <ul id="categories" class="mt-3 space-y-2">
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>Earring</span>
+          </li>
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>Necklace</span>
+          </li>
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>Rings</span>
+          </li>
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>Bracelets</span>
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>All</span>
+          </li>
+          </li>
+          <li class="text-gray-500 hover:underline cursor-pointer">+ View more</li>
+        </ul>
+
+      </details>
+
+      <details open class="border-b border-gray-200 pb-3">
+        <summary class="flex items-center justify-between cursor-pointer text-[24px] font-[Satisfy]">
+          Availability
+          <i class="ri-arrow-down-s-line text-gray-500"></i>
+        </summary>
+        <ul id="availability" class="mt-3 space-y-2">
+          <li class="flex justify-between hover:text-gray-900 cursor-pointer">
+            <span>In stock</span>
+          </li>
+          <li class="flex justify-between text-gray-400 cursor-not-allowed">
+            <span>Out of stock</span>
+          </li>
+        </ul>
+      </details>
+
+      <details class="border-b border-gray-200 pb-3">
+        <summary class="flex items-center justify-between cursor-pointer font-[Satisfy] text-[24px]">
+          Price
+          <i class="ri-arrow-down-s-line text-gray-500"></i>
+        </summary>
+        <div class="mt-3">
+          <input type="range" min="0" max="500" value="250" class="w-full">
+        </div>
+      </details>
+
+      <details open class="border-b border-gray-200 pb-3">
+        <summary class="flex items-center justify-between cursor-pointer font-[Satisfy] text-[24px]">
+          Color
+          <i class="ri-arrow-down-s-line text-gray-500"></i>
+        </summary>
+
+        <div id="colors" class="mt-3 flex space-x-3"></div>
+      </details>
+      <details open>
+        <summary class="flex items-center justify-between cursor-pointer font-[Satisfy] text-[24px]">
+          Size
+          <i class="ri-arrow-down-s-line text-gray-500"></i>
+        </summary>
+        <div id="sizes" class="mt-3 flex flex-wrap gap-2"></div>
+      </details>
+
+    </aside>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+    <section class="flex-1">
+      <div id="product-list"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 max-w-[1500px] mt-[-540px] ml-[300px]">
+
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-57.jpg?v=1714980825&width=600" alt="Product"
+            class="mx-auto mb-4 w-[360px] h-[400px]">
+          <h3 class="font-medium">Gold Necklace</h3>
+          <p class="text-gray-500">$120.00</p>
+        </article>
+
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-16.jpg?v=1714969150&width=600" alt="Product"
+            class="mx-auto mb-4 w-[360px] h-[400px]">
+          <h3 class="font-medium">Silver Ring</h3>
+          <p class="text-gray-500">$90.00</p>
+        </article>
+
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-2.jpg?v=1714967262&width=600" alt="Product"
+            class="mx-auto mb-4 h-[400px]">
+          <h3 class="font-medium">Diamond Earring</h3>
+          <p class="text-gray-500">$150.00</p>
+        </article>
+
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-21.jpg?v=1714969247&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Bracelet</h3>
+          <p class="text-gray-500">$75.00</p>
+        </article>
+
+        <article>
+          <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPEBAPEBAPEBAQEA8QEBAPEBAQEBAPFRUXGBYRFRYYHSggGBolGxYVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGC0lHyYtListLS0tKystLSstKy8tKy0tKy0tLS0tLS0tLS0rLS0tLSsrLS0tLS0tLS0tLS0rLf/AABEIAOAA4AMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQUCBAYDB//EAEQQAAIBAgMEBgcFBgMJAQAAAAABAgMRBBIhBTFBURMiMmFxkQZydIGhscEjJDNCsxQ0UqKy0WJzgkNjZITCw+Hw8TX/xAAYAQEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EACYRAQACAgICAgICAwEAAAAAAAABAgMRITESMgQiM0ETUXGBoUP/2gAMAwEAAhEDEQA/APr4IJKpAASJFyAAABAAAAAAAAJAAASAAAAAAAAAAAAAAADEkAgAAAAAAAAAAAAAAAEgAAJBBIAAAAAAAAAAAAABCAQIAAAACG0NiQQncipO2nEjca2nTIGtVrJb2YwxfeU/lhbwluWINR4x8NfBMxeJnwjLyI/mqnwlugr54morJwldtWtaxYWL1t5fpW1dAFgXVAgAJBpTk1rfv3m5F3S8EylbxZaa6SAY1XppvLzOoVZA1aU2mru6emvM2itL+UJmNAALIAABCAQIAAAeFfEZXltfn3X3FbicVOpLJTu7b8vLxNbadd9NQjdrNDEYh9+TLTgvOon7i42ZRUKa5y6z77/2OSfLJbW+G8TFK7eey6EoZnK+trXdzwr4m06XOs60l/ho0ktV/qlHzLHEO0JvlGXyKLFxax9GL7K2dJR9Z1qef4KBpNIrXxV8vKdrnD0FZSkk5PXXWy5HukuSXgSDatYiGczMgAJQ85q7R6IixJIkEEgLEMkiW4SKHG1kqyvJJyjUUYt2zZVd2XcXGGqXhF84xfmkctt3DyeP2bV0yKntKm9dc84wa+FNnVYZdSHqQ+SOfDGrS1yTuHrc868rRb5HoeGM7EvA1v6yzr2rdn1s0pa3lGsoyV7uMst7Plo0/eXNzltgYeVPE7RTVlPaKqR74PD0FfzTOoKYY1uFsk71LIEIk2UACLgAAQBjN6PwZkBPQ5bai+9Yfv2fWt49LRb+h01Hsx9WNvCxyHpDWdCrgaj7HTzwlRv8sa0Gofzwh5nVYGpmpx7uq/FHNht95bXj6wzxS6k/Ul8jncVWvjMHLfmwuIg/FOlK3lFnTteXHwOE25iugngatk4QxioVZfwwqRlCMvBycV7y2buEY+pd1fj7+R5rEwvbPFt6aNPUoMXRks6bbjvu3u7jy2P24x10ly4XOe/zLRaKxVpXBExvbopY2kqroOpBVVCNR02+uqcm4qbXK6fke5x2KUntbFVsslBYHB0oSaaTaqVZSSfdmXmdbQfVj4I7K33aYYzTUbegANFAkgASQyTGbST/APWRM8EduepY2Fd1ko9bBVJ0rys+u4RnmjyVp29zLvZ881GlL+KlTfnFHM7Ip5au0r/nxNO2m9fs8PrcsdnbTmqdOPRxtGnBLWSbSilyOKuWtL/b+nTak2rwvTXxztCTNN7Vkt9Lyk/rE8K+1o1YuMYtPvsaZPk49TG1K4b73pGx8csTCliIxcVW+1UXa6TtZNre7F2c36IUsuFwS/hw1H4pnRmmHqVcncBlcgG0sgAEJAAAAAHL+n2BdXBYuMYucnRlUpqKu/2in14Nd+aMTLYO1s1GnUTTjWp0qkZO9nJrra8N3wOkq01JNP8A+Pmc9tWg1TmlGLjFXjKD4t9bTg+NzizxNPtV0Ypi3Et7EbbpReS6lJr8klPfpfTdqU22tlwq0ZUJyko16aaku1CUbNVF4OxUQrK0XOH2sakHGcfz9ZJqS521uuXA7KUM3RaKTjGqrXto2ra8Dnpmtm5/ptbHGNq7Lq1JUIuol00Y5aluzKcVbPG/5ZWUvfbgV0Np1alWEILLme+Di11d+llZlhmlTn0eXI2rppqUZaa8rbzxr4GarUpqCpxpKcqkvyzurWfnf3FslbWtH/UVmIiWziYyqRtJZakZRjJvTNF26/hv8iyhVW5FeqspVJqShup2cL2eivv77mykduKsRM6c953EN6LMjxovQ9kbsgAAL21K+riHngmkszkuduVzdrNKLcuzx46FbtOrVeVUl1s153i1emt6i+L5HP8AI348S1xdlWOVNcukk/Cz/uiqxtGhUjB1Ly6OMVaM60bKyvdQki6qzc4WSd5K27cu80ZVV0CjaTeWMV1ZO0tHe9rc/M5Zp5dS2i2lRgtlYOdTNGErQWdvpcTfThrUa32LOVSi63RRsqlpaJPW0b3b3X1IrVPtIQT3xnOS5xWVJP3yb9xo4nCVadbDYiKTUaldVnLR5ZOW7TV9m3gYeE/vnXLTyiel5N5Ytw6tskY2W63BIsKFTNFS57/Epq+0YSjG17Oai3wUnuj5ljgH1Wu87MF/vqOmGSv157bqBimZI7XMAAhIAAAAAHH4/FSpYp5Z5elqYaCV1ab6PEvLro91/cdgcpjYv9pcl+V0W34wrpHP8j1a4u1pPCUfxZU30nR5U9LRbXBLv4lbsmTde/PB4d6t27VW/wAi/WHi4cdYp7+NrnP7H1rRWivg8Nv3dusZzTx1wv5bem2HVVXD5oRnFSyys5Rbg0+su9PKWbw3FRUdN8pykkrcVfU1Np0pRy5pKfVVp2S01uvkW0tUtbaePDkTWkWyW2i1tVjSvnTnGp1mmsis0rLRK687v3m4zSlBxlG886cItN2TurLct3PxNxs1x+0qX6h6UmbEWatM2Ym7NkAAPLFVMsXKzdmtFveu5GpjKs3FNZoNPNGTyrrbra6G7V3PTN/h017jXWaThmhaLebWSl1su5+BlkjcaXpxyqK+IxaTebdd5YujeVuC+zPepi3KglGnOzpxWfKsqWVNvT36lzIrcRnUZKMW0oqN8yso7m8vBeBl/HNYncr+cW/SpjL73V/w4XDpd2edVv8AoibtTFVI3UFGUdVdpOzu9O0iuoSvicV3UsCv5ar+p0NKKstFuXAypSbTxOl7TERzCh2liJyp0s6hH7zh7KKtrnXey7wb0fj9EVvpNFKlSskvvWF3JL/aIscLufj9EXrWa5IiZVmd14bkWeiPGB7I7GCQAAABAAAAc3jovPJ83R99o1TpDnsc+tJcnS+Mapz/ACfVth7XsewvUXyOX2R+8Q1t9zoa+FSsdRDsL1F/ScrsnWvTT44Okr8l0lUZeoKdys8fh3paU5JpPr71e7+tvcWcVeK9Vbt97GniaCXWjKWurhJ31crt+fzNyFnFX10WhNI+9kWn6wrK1FRqJpy1gk1JtvS+/hxkbyW4r61KMakXDMs0GnFtuKtmS1b5uRZQ3LwROP2lF/WGUEe6POMT0RuzZAADCs7RbSvyRp0pVHOm5KCjxyyzWk09N26xu1ZWi3yRpUoycqcm46Sd0r9pp7r+8zsvVus0MVnkpKKj2bK82m1xaVtNLlgyvxVCUs1pRTytK6d3Fa2v36oX3pFe1Bhv3jFvnHBfpT/udLT3LwRzdBWxGLXdg/0mdNDcvBGGD2lrk6hT+lK+xp+1YT9WJZYJaPx+iK70p/Bp+04X9WJY7M7L9Z/Qvb8sKx6NpI9UYGSOhkkAAAAQAAAHP47ty8aXyqnQFPjY6L/Mf9L/APJz/J9WuLtZ0/w16i/pOcilHGqKVl+x07W3fiVL28zpKf4a9RfI5qp+/R9jj+pMjN1CcfcrjExhe6jO6zJpJyduZ6wrJRs9eF1GXHny3GzKLvmjZS3XaumuTPKEZqTbcfi7+428NTuFPLcKypSheDglmScZZdYp93vbLOMbe4xp0FHRW4v3noTWupmUWnfDNGUTBGaLqpAAGFZNxdld2dl3lXho5MrnUu4SWdZVGOaVo35vXRa8S3NGWEam6l8yt1YNRtGXF9+/4Gdq7WrLd8DRxMHJO1S11pFJWcU3q332se1K15O1nlUVo0nvv8xToWb4QvdRSVl3Lkr3E8kcOcemLxq9j/SkdHDcvBHO1P3zHf8AJfpTOhhuXgjLFGry0vzWFV6UL7GHtWF/URv7L7L9Z/Q0/SRXpU1/xOH+Ejb2S7xfrP6CfzQiPxy3jNGBmjpZAAAgkgECQAAKnGbl/mfSRbFTjOH+b9JGHyPVri7WUPw16n0Oar/v8fYo/qTOmp9heovkc5UX3+PsS/VkVy9QnH3LpSGSQzqhgxDRIsARkgkSEgAAAAgAABy1Zffcb6mBf8lQ6GC0Xgihrr79i++lgH8Ky+h0EV1V4Iwp72a2n6wq/SH8Ol7TQ/6v7Gxsd9WXrfRGv6Rdij7VS+UzY2MurL1n9CJ/NH+Ex+OW+jMwiZnSxAAQIAAAkgEiSoxnaXdWXykW5WYmPXatunGXus9fic/yI+rXF2sIdher9DnZf/oQ9h/7rOig+ou6JUyw0enp1dc/RSpvX8ialu8WyMvUFP2uAwGdLFCJIRkAAASAAAACAAAHN4pW2hXX8WEwcl/pqYiL+aOgj2V4FDtz7LGYer+WrQrYdv8A3kJRq017103kXtKScYtNNNJprc0zKnvLS3rCp9JNI4f2qn/RUNrY34bfOTPH0go5o0ndJU60ajvxWScfnI2NkxtRjfe7vzd18LGfef8A0t/5tyBmYQMzqYgAIBkAAAAAR4Yim7qcd60fG8T3JItXyjUpidNSdS+idlxiuP8AYmnRvLM+Csl47/kjayrkiWUjFzuVpvxwxABqzESiCQkAAAAggSAAAAA0tsbPWJpOnmcJXjOnUSu6dWLvGa8H8yrw9DGUopRVPVXlSlmnCE3v6OcWmo31s0dCLFLU3zC1ba4UFLCYirL7ecXG+lOnDLFd9222+9vwRdqNkkjPKEhTHFeS1t8EUSAaKgAIEAAAAABJBJIAAAyCSAgJIASAAgAAAJIAAAAAABIIBIkEEgAABABBAkAAAAAAAAEAkSACABBKAAAAAAAAAAAAAAAAAAAD/9k="
+            alt="Product" class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://media.johnlewiscontent.com/i/JohnLewis/110710572?fmt=auto&$background-off-white$"
+            alt="Product" class="mx-auto mb-4 w-[800px] h-[400px]">
+          <h3 class="font-medium">Luxury Ring</h3>
+          <p class="text-gray-500">$350.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-57.jpg?v=1714980825&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-6.jpg?v=1714968849&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-47.jpg?v=1714980474&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-52.jpg?v=1714980702&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-57.jpg?v=1714980825&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+        <article>
+          <img src="https://wpbingo-adena.myshopify.com/cdn/shop/files/pro-41.jpg?v=1714979836&width=600" alt="Product"
+            class="mx-auto mb-4 w-[400px] h-[400px]">
+          <h3 class="font-medium">Pearl Necklace</h3>
+          <p class="text-gray-500">$200.00</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+  <footer class="bg-white text-gray-700 border-t border-gray-200">
+    <div class="max-w-[1700px] mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <div class="md:col-span-6">
+          <h3 class="text-2xl font-[Roboto] font-semibold text-gray-900 mb-2">NEWSLETTER SIGN-UP</h3>
+          <p class="text-sm text-black mb-6 mt-6">
+            Get insider information about exclusive offers, events and more.
+          </p>
+          <form class="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-0 sm:max-w-md">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address..." class="w-full border-b-1 px-2"
+              required>
+            <button type="submit" class="mt-2 sm:mt-0 sm:ml-3 px-[36px] py-1 border h-[46px]">
+              <h1 class="text-[14px] w-[60px]">SIGN UP</h1>
+            </button>
+          </form>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-sm font-semibold font-[Roboto]  text-black mb-4">ABOUT US</h4>
+          <ul class="space-y-3 text-sm text-gray-500">
+            <li><a href="#" class=" text-black cursor-pointer hover:text-[#4B372A]">Our Shops</a></li>
+            <li><a href="#" class=" text-black cursor-pointer hover:text-[#4B372A]">Contact</a></li>
+            <li><a href="#" class=" text-black cursor-pointer hover:text-[#4B372A]">Artists</a></li>
+            <li><a href="#" class=" text-black cursor-pointer hover:text-[#4B372A]">Local Giving</a></li>
+            <li><a href="#" class=" text-black cursor-pointer hover:text-[#4B372A]">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-sm font-[Roboto] font-semibold text-black mb-4">CATEGORIES</h4>
+          <ul class="space-y-3 text-sm text-gray-500">
+            <li><a href="#" class="text-black cursor-pointer hover:text-[#4B372A] ">New In</a></li>
+            <li><a href="#" class="text-black cursor-pointer hover:text-[#4B372A]">Earrings</a></li>
+            <li><a href="#" class="text-black cursor-pointer hover:text-[#4B372A]">Rings</a></li>
+            <li><a href="#" class="text-black cursor-pointer hover:text-[#4B372A]">Necklace</a></li>
+            <li><a href="#" class="text-black cursor-pointer hover:text-[#4B372A]">Bracelets</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-sm font-semibold font-[Roboto] text-black mb-4">INFORMATION</h4>
+          <ul class="space-y-3 text-sm text-gray-500">
+            <li><a href="#" class="cursor-pointer hover:text-[#4B372A] text-black">Faq</a></li>
+            <li><a href="#" class="cursor-pointer hover:text-[#4B372A] text-black">Size guide</a></li>
+            <li><a href="#" class="cursor-pointer hover:text-[#4B372A] text-black">Shipping</a></li>
+            <li><a href="#" class="cursor-pointer hover:text-[#4B372A] text-black">Order status</a></li>
+            <li><a href="#" class="cursor-pointer hover:text-[#4B372A] text-black">Exchanges</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-100 mt-10 pt-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-black">Copyright © 2024. All Right Reserved</p>
+
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-[#4B372A]">
+              <i class="ri-facebook-fill text-[#4B372A] text-lg  hover:text-white"></i>
+            </a>
+
+            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-[#4B372A]">
+              <i class="ri-instagram-line text-[#4B372A] text-lg  hover:text-white"></i>
+            </a>
+
+            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border  hover:bg-[#4B372A]">
+              <i class="ri-twitter-line text-[bg-[#4B372A]] text-lg hover:text-white"></i>
+            </a>
+
+            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full border hover:bg-[#4B372A] -white">
+              <i class="ri-linkedin-line text-[#4B372A] text-lg hover:text-white"></i>
+            </a>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    axios.get("http://localhost:1337/api/categories")
+      .then(res => console.log(res.data))
+      .catch(err => console.error(err));
+  </script>
+
+  <div id="app"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
