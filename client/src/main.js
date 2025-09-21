@@ -2,7 +2,6 @@ const AxiosInstance = axios.create({
     baseURL: "http://localhost:1337/api",
     timeout: 3000,
 });
-
 let allProducts = [];
 const getApiData = async () => {
     try {
@@ -42,7 +41,7 @@ if (!document.getElementById("search-modal")) {
         </div>
     </div>
     `;
-    document.body.insertAdjacentHTML("beforeend", modalHtml);
+    document.body.insertAdjacentHTML("beforeend", modalHtml);//beforeend-son child
     document.getElementById("search-modal-close").onclick = () => {
         document.getElementById("search-modal").style.display = "none";
     };
@@ -56,7 +55,7 @@ if (!document.getElementById("search-modal")) {
         }
         resultsDiv.innerHTML = "<p style='color:#888;'>Axtarılır...</p>";
         try {
-            const res = await AxiosInstance.get(`/products?filters[name][$eq]=${encodeURIComponent(val)}&populate=*`);
+            const res = await AxiosInstance.get(`/products?filters[name][$containsi]=${encodeURIComponent(val)}&populate=*`);
             const items = res.data.data;
             if (items.length === 0) {
                 resultsDiv.innerHTML = "<p style='color:#888;'>Nəticə tapılmadı.</p>";
@@ -92,11 +91,40 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("search-results").innerHTML = "";
         });
     }
+
+    // Main search input logic
+    const mainSearchInput = document.getElementById("search");
+    if (mainSearchInput) {
+        mainSearchInput.addEventListener("input", async (e) => {
+            const val = e.target.value.trim();
+            if (!val) {
+                renderProducts(allProducts);
+                return;
+            }
+            try {
+                const res = await AxiosInstance.get(`/products?filters[name][$containsi]=${encodeURIComponent(val)}&populate=*`);
+                const items = res.data.data;
+                renderProducts(items);
+            } catch (err) {
+                renderProducts([]);
+            }
+        });
+    }
 });
 
 function renderProducts(products) {
     const container = document.getElementById("product-list");
     container.innerHTML = "";
+
+
+    container.classList.add(
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "lg:grid-cols-3",
+        "gap-x-1",
+        "gap-y-6"
+    );
 
     const globalHeartCount = document.querySelector(".header-heart-count");
     const globalCartCount = document.querySelector(".header-cart-count");
@@ -115,8 +143,8 @@ function renderProducts(products) {
 
 
         container.insertAdjacentHTML("beforeend", `
-        <article class="relative group rounded-lg p-4 text-left" id="product-${index}">
-            <img src="${imgUrl}" alt="${name}" class="mb-4 w-[400px] h-[400px] object-cover">
+        <article class="relative group rounded-lg p-4 text-left mx-auto max-w-[400px]" id="product-${index}">
+            <img src="${imgUrl}" alt="${name}" class="mb-4 w-full h-[400px] object-cover">
 
             <div class="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
             
@@ -432,7 +460,7 @@ function renderProducts(products) {
                             updateSubtotal();
                         }
                         cartItem.querySelector(".plus").addEventListener("click", () => {
-                            let qtyVal = parseInt(qtyEl.textContent) + 1;
+                            let qtyVal = parseInt(qtyEl.textContent) + 1;//string to int
                             qtyEl.textContent = qtyVal;
                             updatePrice(qtyVal);
                         });
@@ -504,6 +532,7 @@ function renderFilters(products) {
     ${size} <span class="text-gray-400">(${products.filter(p => p.product_sizes.some(s2 => s2.name === size)).length})</span>
     </button>
     `).join('');
+// flatMap-hər məhsulun rəngləri və ölçüləri bir array olaraq düzləşdirilsin və sonra unikal dəyərlər çıxarılsın.
 }
 
 // filter klik
